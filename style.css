@@ -14,7 +14,7 @@ body {
   .hero {
     text-align: center;
     padding: 5rem 1rem;
-    background: url('../assets/hero.jpg') no-repeat center center/cover;
+    /* background: url('../assets/hero.jpg') no-repeat center center/cover; doesnt exist */
   }
 
   #products {
@@ -49,6 +49,13 @@ body {
     cursor: pointer;
   }
 
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
   *
 {
     margin: 0;
@@ -59,13 +66,6 @@ body
 {
     min-height: 100vh;
     background:aliceblue;
-}
-.container
-{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
 }
 .bubbles
 {
@@ -99,6 +99,13 @@ body
     {
         transform: translateY(100vh) scale(0);
     }
+    
+    /* Makes bubbles appear and disapear near products level */
+    45%{ opacity : 1; }
+    50%{ opacity : 0; }
+    75%{ opacity : 0; }
+    80%{ opacity : 1; }
+
     100%
     {
         transform: translateY(-100vh) scale(1);

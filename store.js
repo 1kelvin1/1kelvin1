@@ -46,4 +46,3 @@ function buy(productId, price) {
     stripe.redirectToCheckout({ sessionId: data.id });
   });
 }
-
